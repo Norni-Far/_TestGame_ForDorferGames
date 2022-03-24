@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -35,13 +33,10 @@ public class S_tuchOtherThings : MonoBehaviour
             tuchKnife = true;
             Collider.enabled = false;
 
-            //Rigidbody.bodyType = RigidbodyType2D.Dynamic;
-
             Rigidbody.velocity = new Vector2(0, 0);
             Rigidbody.angularVelocity = Random.Range(300, 600.01f);
             Rigidbody.gravityScale = 0.7f;
             Vibration.Vibrate(100);
-
 
             event_tuchOfKnife?.Invoke();
 

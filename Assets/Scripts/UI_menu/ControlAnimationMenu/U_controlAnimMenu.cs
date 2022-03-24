@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class U_controlAnimMenu : MonoBehaviour
@@ -9,14 +7,11 @@ public class U_controlAnimMenu : MonoBehaviour
     public delegate void Delegats();
     public event Delegats Event_reloadNeed;
 
-
-
     [SerializeField] private GameObject GameUI;
     [SerializeField] private Animator MainMenu_Anim;
     [SerializeField] private Animator SettingsMenu_Anim;
     [SerializeField] private Animator FailPanel_Anim;
     [SerializeField] private Animator ShopPanel_Anim;
-
 
     public int reloadGameIsWas;
 
@@ -30,10 +25,11 @@ public class U_controlAnimMenu : MonoBehaviour
             GameUI.SetActive(true);
             Event_reloadBtnIsDown?.Invoke(0);
         }
-
     }
 
     public void SetRetoadGame() => reloadGameIsWas = 1;
+
+    #region BtnFromUI
 
     // MainMenu
     public void Btn_MainMenu_play()
@@ -90,7 +86,7 @@ public class U_controlAnimMenu : MonoBehaviour
         MainMenu_Open();
     }
 
-
+    #endregion
 
     #region MoveAnim
     private void MainMenu_Open()
