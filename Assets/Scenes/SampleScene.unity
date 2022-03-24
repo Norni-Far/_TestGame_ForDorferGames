@@ -7956,7 +7956,7 @@ MonoBehaviour:
   - {fileID: 1779671811}
   - {fileID: 1963572248}
   - {fileID: 497510219}
-  priceList: 00000000110000001c00000027000000
+  priceList: 00000000010000000200000003000000
   textPrice: {fileID: 349712744}
 --- !u!95 &1460812548
 Animator:
